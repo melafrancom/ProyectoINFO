@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #LOCAL_APPS:
-    #'apps.Persona',
     'apps.accounts',
+    'apps.publicacion',
     
     #THIRD_APPS:
 ]
