@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Carpetas ignoradas manualmente:
+src/HECHOS_CON_ALMA/settings/local.py
