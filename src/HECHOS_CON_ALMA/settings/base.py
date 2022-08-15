@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #LOCAL_APPS:
-    'apps.Persona',
+    #'apps.Persona',
+    'apps.accounts',
     
     #THIRD_APPS:
 ]
@@ -136,3 +137,5 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.User'

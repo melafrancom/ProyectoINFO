@@ -7,7 +7,7 @@ from .base import *
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'proyectoInfo',
+        'NAME': 'info2022fundacion',
         'USER': 'root',
         'PASSWORD': 'mantecoso',
         'HOST': 'localhost',
