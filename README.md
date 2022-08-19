@@ -31,7 +31,9 @@ _Lo que necesitas para correr la aplicacion, es instalar los que esta dentro del
 
 _Debes estar dentro del entorno virtual y y ejecutar el comando:_
 
+```
 _"pip install -r requirements.txt"_
+```
 
 ****************************************************************************************************************
 
