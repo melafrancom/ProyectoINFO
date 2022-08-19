@@ -5,7 +5,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 _Para crear el archivo "local.py" que no se debe subir en el repositorio de git.
 
-
+```
 from .base import *
 
 DABASE = {
@@ -19,6 +19,7 @@ DABASE = {
     }
 
 }
+```
 
 ### Pre-requisitos 📋
 
