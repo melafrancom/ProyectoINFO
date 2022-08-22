@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     #LOCAL_APPS:
     'apps.accounts',
     'apps.publicacion',
+    'apps.donacion',
     
     #THIRD_APPS:
 ]
