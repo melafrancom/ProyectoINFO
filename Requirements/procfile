@@ -1,1 +1,1 @@
-web: gunicorn ProyectoINFO.wsgi
+web: gunicorn ProyectoINFO.src.HECHOS_CON_ALMA.wsgi
