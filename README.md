@@ -8,7 +8,7 @@ _Para crear el archivo "local.py" que no se debe subir en el repositorio de git.
 ```
 from .base import *
 
-DABASE = {
+DATABASES = {
     'default' : {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'info2022fundacion',
