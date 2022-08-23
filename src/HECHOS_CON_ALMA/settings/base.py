@@ -21,6 +21,7 @@ import os
 import sys
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,7 +128,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
-    os.path.join(os.path.dirname(BASE_DIR), 'static')
+    os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
 ]
 
 
