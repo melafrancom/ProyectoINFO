@@ -1,0 +1,23 @@
+<! No hace falta agregar el meta charset debido a que haremos graficos ahora.>
+<canvas width="600" height="400">
+	
+</canvas>
+
+<script type="text/javascript">
+//fondo, contorno, x, y, base, altura
+	function dibujarCuadrado(fondo=prompt("Ingrese un fondo: "), contorno=prompt("Ingrese el contorno: "), x=parseInt(prompt("Ingrese el valor de la posicion horizontal: ")), y=parseInt(prompt("Ingrese el valor de la posicion vertical: ")), base=parseInt(prompt("Ingrese el valor de la base: ")), altura=parseInt(prompt("Ingrese el valor de la altura: "))) {
+		var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
+
+		pincel.fillStyle = fondo; //propiedad del objeto.
+		pincel.fillRect(x, y, base, altura); //function
+		pincel.strokeStyle = contorno;
+		pincel.strokeRect(x, y, base, altura); // Dibuja contornos
+
+	}
+
+dibujarCuadrado()
+dibujarCuadrado()
+
+//x=parseInt(prompt("Ingrese el valor de la posicion horizontal: ")), y=parseInt(prompt("Ingrese el valor de la posicion vertical: "))
+</script>

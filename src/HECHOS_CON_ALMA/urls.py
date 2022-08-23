@@ -16,16 +16,17 @@ Including another URLconf
 from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path
+
 from .views import inicio
-from apps.accounts import views
-from apps.publicacion import views
-from apps.donacion import views
-from django.urls import path, include
+from apps.accounts.views import cuentas
+from apps.publicacion.views import publicaciones
+from apps.donacion.views import donaciones
+from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
-    path('accounts/', views.index, name='index'),
-    path('donacion/', views.index, name='index'),
-    path('publicacion/', views.index, name='index'),
+    path('accounts/', cuentas),
+    path('donacion/', donaciones),
+    path('publicacion/', publicaciones),
 ]
