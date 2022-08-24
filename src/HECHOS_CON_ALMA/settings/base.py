@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-^39@b8k-k(x2g$bxmkl8$rti!ps5ip+cfsaml%w%h*@=v)7@u+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*.herokuapp.com', 'proyectoinfo2022.herokuapp.com']
+ALLOWED_HOSTS = ['*', '*.herokuapp.com', 'proyectoinfo2022.herokuapp.com']
 
 
 # Application definition
@@ -65,8 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'HECHOS_CON_ALMA.urls'

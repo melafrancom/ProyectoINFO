@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.HECHOS_CON_ALMA.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProyectoINFO.src.HECHOS_CON_ALMA.settings')
 
 application = get_asgi_application()
