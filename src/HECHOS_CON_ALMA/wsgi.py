@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HECHOS_CON_ALMA.settings.local')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProyectoINFO.src.HECHOS_CON_ALMA.settings.local')
 
 application = get_wsgi_application()
