@@ -24,7 +24,7 @@ a[href^="tel:"] { color: inherit; text-decoration: none;}
 a{ color:#009cde; text-decoration: underline; outline:none}
 a:hover{ color:#009cde; text-decoration: none; outline:none}
 
-body{ background:#fff; border:0; font: 14px 'Roboto', Arial, Helvetica, sans-serif; color:#666666 ; line-height:20px; min-width:320px;}
+body{ background:rgb(221, 234, 236); border:0; font: 14px 'Roboto', Arial, Helvetica, sans-serif; color:#666666 ; line-height:20px; min-width:320px;}
 
 .container { position: relative; min-width: 320px;}
 
@@ -88,7 +88,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 #services{}
 
-.services1{background: url(../images/services1_bg.jpg) center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
+.services1{background: url(../images/backgroundhecho2.png) center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
 .services1 .block1{}
 .services1 .block1 img{margin-left: auto; margin-right: auto;}
 .services1 .block2{padding-top: 25px;}
