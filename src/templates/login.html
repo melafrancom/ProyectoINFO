@@ -9,14 +9,24 @@
     </head>
     <body>
         <h1>Bienvenido a nuestro Login Page:</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{message.tags }}" {% endif %}>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% if user.is_authenticated %}
-        {% if user.is_authenticated %}
-        <h2>Usted está logeado como {{ }}</h2>
+        <h2>Usted está logeado como {{ user.username }}</h2>
+        <a href="% 'logout' %">Cerrar sesión</a>
+        <a href="{% url '' %}">Volver al inicio</a>
         {% else %}
         <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Iniciar Sesión:</button>
         </form>
+        {% endif %}
+        <p>No tiene una cuenta? <span><a href="#"> Registrece acá:</a></span></p>
     </body>
 </html>
