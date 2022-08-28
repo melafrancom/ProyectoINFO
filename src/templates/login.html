@@ -16,9 +16,10 @@
             {% endfor %}
         </ul>
         {% endif %}
+
         {% if user.is_authenticated %}
         <h2>Usted está logeado como {{ user.username }}</h2>
-        <a href="% 'logout' %">Cerrar sesión</a>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
         <a href="{% url '' %}">Volver al inicio</a>
         {% else %}
         <form action="" method="post">
@@ -27,6 +28,6 @@
             <button type="submit">Iniciar Sesión:</button>
         </form>
         {% endif %}
-        <p>No tiene una cuenta? <span><a href="#"> Registrece acá:</a></span></p>
+        <p>No tiene una cuenta? <span><a href="% url 'registrar_usuario' %"> Registrece acá:</a></span></p>
     </body>
 </html>
