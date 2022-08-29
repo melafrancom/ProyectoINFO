@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang='en'>
-    Hola gente bonita... Aca va un inicio de sesion!
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,16 +18,17 @@
         {% endif %}
 
         {% if user.is_authenticated %}
-        <h2>Usted está logeado como: {{ user.username }}</h2>
-        <a href= "{% url 'logout' %}">Cerrar sesión</a>
-        <a href="{% url 'principal' %}">Volver al inicio</a>
+            <h2>Usted está logeado como: {{ user.username }}</h2>
+            <a href= "{% url 'logout' %}">Cerrar sesión</a>
+            <a href="{% url 'principal' %}">Volver al inicio</a>
         {% else %}
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-success" type="submit">Iniciar Sesión:</button>
-        </form>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success" type="submit">Iniciar Sesión:</button>
+            </form>
+            <p>No tiene una cuenta? <span> <a href="{% url 'registrar_usuario' %}"> Registrese acá:</a></span></p>
         {% endif %}
-        <p>No tiene una cuenta? <span> <a href="{% url 'registrar_usuario' %}"> Registrese acá:</a></span></p>
+
     </body>
 </html>
