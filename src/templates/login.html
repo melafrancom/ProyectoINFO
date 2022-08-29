@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang='en'>
     Hola gente bonita... Aca va un inicio de sesion!
@@ -12,22 +13,22 @@
         {% if messages %}
         <ul class="messages">
             {% for message in messages %}
-            <li{% if message.tags %} class="{{message.tags }}" {% endif %}>{{message}}</li>
+            <li{% if message.tags %} class="{{message.tags }}" {% endif %}>{{ message }}</li>
             {% endfor %}
         </ul>
         {% endif %}
 
         {% if user.is_authenticated %}
-        <h2>Usted está logeado como {{ user.username }}</h2>
-        <a href="{% url 'logout' %}">Cerrar sesión</a>
-        <a href="{% url '' %}">Volver al inicio</a>
+        <h2>Usted está logeado como: {{ user.username }}</h2>
+        <a href= "{% url 'logout' %}">Cerrar sesión</a>
+        <a href="{% url 'principal' %}">Volver al inicio</a>
         {% else %}
         <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Iniciar Sesión:</button>
+            <button class="btn btn-success" type="submit">Iniciar Sesión:</button>
         </form>
         {% endif %}
-        <p>No tiene una cuenta? <span><a href="% url 'registrar_usuario' %"> Registrece acá:</a></span></p>
+        <p>No tiene una cuenta? <span> <a href="{% url 'registrar_usuario' %}"> Registrese acá:</a></span></p>
     </body>
 </html>

@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from .views import inicio
+from .views import index
 from apps.publicacion.views import publicaciones
 from apps.donacion.views import donaciones
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio),
+    path('', index, name='principal'),
     path('accounts/', include('apps.accounts.urls')),
     path('donacion/', donaciones),
     path('publicacion/', publicaciones),

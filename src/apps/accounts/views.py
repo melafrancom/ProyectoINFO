@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
@@ -20,24 +21,26 @@ def login_view(request):
             )
             if user is not None:
                 login(request, user)
-                return redirect('')
+                return redirect('principal')
             else:
                 messages.info(request, 'Credenciles invalidas.')
         else:
             messages.error(request, 'Hay errores en el formulario.')
     return render(request, 'login.html', {'form': form})
 
+
 def logout_view(request):
     logout(request)
-    return redirect('')
+    return redirect('principal')
+
 
 def regitrar_usuario(request):
     form = SignUpForm()
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST) #Aca cargamos el formulario con los datos del post
         if form.is_valid():
             new_user = form.save()
             print(new_user)
             messages.success(request, 'Usuario creado')
-            return redirect('login')
-    return render(request, 'register.html', {'form': form, 'posts': posts})
+            return redirect('principal')
+    return render(request, 'register.html', {'form': form})

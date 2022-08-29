@@ -7,11 +7,23 @@
     <title>Registro de usuarios:</title>
 </head>
 <body>
-    <h1>Registrese:</h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Confirmar</button>
-    </form>
+    <h1 class="text-center"> Registrese:</h1>
+    <div class="d-flex justify-content-center">
+        <div class="card-header">Registrarse:
+        {if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{%endif %}>{{ message }}</li>
+                {% endfor %} 
+            </ul>
+        {% endif %}
+        <div class="class-body">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-success">Confirmar</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
