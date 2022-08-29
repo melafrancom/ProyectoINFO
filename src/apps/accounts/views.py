@@ -25,7 +25,6 @@ def login_view(request):
                 messages.info(request, 'Credenciles invalidas.')
         else:
             messages.error(request, 'Hay errores en el formulario.')
-    
     return render(request, 'login.html', {'form': form})
 
 def logout_view(request):
@@ -37,5 +36,8 @@ def regitrar_usuario(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            redirect('')
-    return render(request, 'register.html', {'form': form})
+            new_user = form.save()
+            print(new_user)
+            messages.success(request, 'Usuario creado')
+            return redirect('login')
+    return render(request, 'register.html', {'form': form, 'posts': posts})
