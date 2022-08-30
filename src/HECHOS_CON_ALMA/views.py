@@ -24,8 +24,3 @@ def Areas(request):
     template_name = "areas.html"
     ctx = {}
     return render(request, template_name, ctx)
-
-def Blog(request):
-    template_name = "blog.html"
-    ctx = {}
-    return render(request, template_name, ctx)

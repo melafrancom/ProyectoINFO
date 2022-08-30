@@ -19,7 +19,7 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import index, objetivos, Nosotros, Areas, Blog
+from .views import index, objetivos, Nosotros, Areas
 from apps.donacion.views import donaciones
 
 
