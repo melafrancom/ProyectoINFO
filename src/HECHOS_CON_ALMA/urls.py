@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-#from HECHOS_CON_ALMA import views
-from .views import index, objetivos
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+from .views import index, objetivos, Nosotros, Areas, Blog
 from apps.publicacion.views import publicaciones
 from apps.donacion.views import donaciones
 
@@ -26,6 +29,11 @@ urlpatterns = [
     path('', index, name='principal'),
     path('accounts/', include('apps.accounts.urls')),
     path('objetivos/', objetivos, name='objetivos'),
+    path('sobre_nosotros/', Nosotros, name='nosotros'),
+    path('areas/', Areas, name='areas'),
+    path('blog/', Blog, name='blog'),
+    
     path('donacion/', donaciones),
     path('publicacion/', publicaciones),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
