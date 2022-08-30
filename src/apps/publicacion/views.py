@@ -1,11 +1,9 @@
-import http
-from http.client import HTTPResponse
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import post
 
 # Create your views here.
 
-def publicaciones(request):
-    template_name = "programa4.html"
-    ctx = {}
-    return render(request, template_name, ctx)
+def post_list(request):
+    posts = post.objects.all()
+    print(posts.query)
+    return render(request, 'blog.html', {'posts': posts})

@@ -1,4 +1,4 @@
-"""HECHOS_CON_ALMA URL Configuration
+"""HECHOS_CON_ALMA URL Configuration -----> Solo las 3 apps tienen [urls.py y views.py] propios, los demás son puestos todos dentro de la app principal.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -20,7 +20,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from .views import index, objetivos, Nosotros, Areas, Blog
-from apps.publicacion.views import publicaciones
 from apps.donacion.views import donaciones
 
 
@@ -31,9 +30,9 @@ urlpatterns = [
     path('objetivos/', objetivos, name='objetivos'),
     path('sobre_nosotros/', Nosotros, name='nosotros'),
     path('areas/', Areas, name='areas'),
-    path('blog/', Blog, name='blog'),
+    path('blog/', include('apps.publicacion.urls')),
     
     path('donacion/', donaciones),
-    path('publicacion/', publicaciones),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

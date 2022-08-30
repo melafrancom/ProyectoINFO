@@ -11,12 +11,12 @@ class post(models.Model):
     titulo = models.CharField("Titulo", max_length=250)
     autor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
     contenido = models.TextField()
-    #img = models.ImageField(null=True, blank=True, upload_to='img/publicacion', help_text='Seleccione una imagen para mostrar:')
+    img = models.ImageField(null=True, blank=True, upload_to='img/publicacion', help_text='Seleccione una imagen para mostrar:')
     creado = models.DateTimeField(default=timezone.now)
     modificado = models.DateField(auto_now=True)
     publicado = models.DateField(blank=True, null=True)
-    categorias = models.ManyToManyField('Categoria', related_name='publicacion')
-    slug = models.SlugField()
+    #categorias = models.ManyToManyField('Categoria', related_name='publicacion')
+    #slug = models.SlugField()
 
     def __str__(self):
         return self.title
