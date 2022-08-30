@@ -1,5 +1,26 @@
 # ProyectoINFO 2022
 
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [VISUAL_STUDIO_CODE](https://code.visualstudio.com/) - usado para codear.
+* [GIT](https://git-scm.com/) - usado para guardar versiones.
+* [DJANGO](https://www.djangoproject.com/) - el framework utilizado.
+* [HEROKU](https://id.heroku.com/login) - utilizado para subir el proyecto.
+
+
+## Autores ✒️
+
+* **Franco Maximiliano MELA** - *Trabajo FINAL: Back + Front* - [melitaf](https://github.com/melitaf)
+* **Joaquin CLEVA** - *Trabajo FINAL: Ayudo a hacer deploy* - [joaquincleva](https://github.com/joaquincleva)
+* **Santiago MARTIN** - *Trabajo FINAL: Front* - [zzantiago](https://github.com/zzantiago)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/melitaf/ProyectoINFO/graphs/contributors) quíenes han participado en este proyecto, y tambien a través de [TRELLO](https://trello.com/b/tHGTrbiw/fundacion-info2022) cómo nos organizamos.
+------------------------------------------------------------------------------------------------------------------------
+
+
 ## Comenzando 🚀
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
@@ -62,22 +83,3 @@ Da un ejemplo
 _Agrega notas adicionales sobre como hacer deploy_
 
 ****************************************************************************************************************
-
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [VISUAL_STUDIO_CODE](https://code.visualstudio.com/) - usado para codear.
-* [GIT](https://git-scm.com/) - usado para guardar versiones.
-* [DJANGO](https://www.djangoproject.com/) - el framework utilizado.
-* [HEROKU](https://id.heroku.com/login) - utilizado para subir el proyecto.
-
-
-## Autores ✒️
-
-* **Franco Maximiliano MELA** - *Trabajo FINAL: Back + Front* - [melitaf](https://github.com/melitaf)
-* **Joaquin CLEVA** - *Trabajo FINAL: Ayudo a hacer deploy* - [joaquincleva](https://github.com/joaquincleva)
-* **Santiago MARTIN** - *Trabajo FINAL: Front* - [zzantiago](https://github.com/zzantiago)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/melitaf/ProyectoINFO/graphs/contributors) quíenes han participado en este proyecto, y tambien a través de [TRELLO](https://trello.com/b/tHGTrbiw/fundacion-info2022) cómo nos organizamos.
----
