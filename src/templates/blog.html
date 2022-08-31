@@ -90,7 +90,7 @@
 		</div>
 		<div id="home-subpage">
 			<div id="home-subpage-inner">
-				<div class="page_slide"><img src="/static/images/contacts_bg.jpg" alt=""></div>
+				<div class="page_slide"><img src="\static\images\backgroundhecho2.png" alt=""></div>
 				<div class="h1_wrapper">
 					<div class="container">
 						<h1>Bienvenidos al blog de HECHOS CON ALMA ...</h1>
@@ -101,11 +101,11 @@
 		<div class="home_bot">
 			<div class="container">
 				<div class="phone1_wrapper">
-					<div class="phone1 clearfix"><i class="fa fa-phone-square"></i><span>1 800 123 45678</span></div>
+					<div class="phone1 clearfix"><i class="fa fa-phone-square"></i><span>3725-455384</span></div>
 				</div>
 				<div class="social_wrapper">
 					{% if request.user.is_authenticated %}
-						<a href="{% url 'post_create' %}">Crear Post</a>
+						<a class="btn btn-primary" href="{% url 'post_create' %}">Crear Post</a>
 					{% endif %}
 					<ul class="social clearfix">
 						<li><a href="https://www.instagram.com/hechocon_alma/?hl=es-la"><i
@@ -134,7 +134,8 @@
 					</div>
 				</div>
 					{% if request.user.is_authenticated %}
-						<a href="{% url 'post_update' Post.id %}">Editar Post</a>
+						<a class="btn btn-primary" href="{% url 'post_update' Post.id %}">Editar Post</a>
+						<a class="btn btn-danger" href="{% url 'post_delete' Post.id %}">Borrar Post</a>
 					{% endif %}
 				{% endfor %}
 			</div>
