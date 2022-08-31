@@ -1,8 +1,12 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>More</title>
+	<title>Blog</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +45,9 @@
 
 	<script src="/static/js/scripts.js"></script>
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
@@ -85,7 +89,7 @@
 				<div class="page_slide"><img src="/static/images/contacts_bg.jpg" alt=""></div>
 				<div class="h1_wrapper">
 					<div class="container">
-						<h1>Lista de blogs</h1>
+						<h1>Bienvenidos al blog de HECHOS CON ALMA ...</h1>
 					</div>
 				</div>
 			</div>
@@ -106,12 +110,31 @@
 				<a href="#content" class="home_link1 scroll-to"><i class="fa fa-arrow-circle-o-down"></i></a>
 			</div>
 		</div>
-<!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
+		<!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
 		<div id="content">
-			
+			<div class="container">
+				<h1 class="my-3">Lista de posts:</h1>
+
+
+				{% for post in posts %}
+				<div class="row row-cols-1 row-cols-md-3 g-4">
+					<div class="col">
+						<div class="card">
+							<img src="Aqui va 1 post" class="card-img-top" alt="Imagen del post">
+							<div class="card-body">
+								<h5 class="card-title">{{ post.title }}</h5>
+								<p class="card-text">{{ post.content }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+
+			</div>
 		</div>
 
-<!-- AQUI FINALIZA EL CONTENIDO DEL MEDIO??????? -->
+		<!-- AQUI FINALIZA EL CONTENIDO DEL MEDIO??????? -->
 		<div id="contacts">
 			<div id="contacts1">
 				<div class="container">
@@ -134,10 +157,10 @@
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</figure>
 		</div>
-		
 
 
-<!-- AQUI COMIENZA LA PARTE FINAL DE LA PAGINA -->
+
+		<!-- AQUI COMIENZA LA PARTE FINAL DE LA PAGINA -->
 		<div id="bot1">
 			<div class="container">
 				<div class="bot1_inner clearfix">
