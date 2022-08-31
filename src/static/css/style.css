@@ -98,7 +98,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 .phone2 i{color: #a3a3a3; float: left; padding-right: 20px;}
 .phone2 span{display: table;}
 
-.services2{background: url(../images/mascruces.jpg) center bottom no-repeat #fff; padding: 70px 0;border-top: 1px solid #fafafa;}
+.services2{background: url(../images/mascruces.png) center bottom no-repeat #fff; padding: 70px 0;border-top: 1px solid #fafafa;}
 .services2 .block1{padding-top: 25px;}
 .services2 .block2{}
 .services2 .block2 img{margin-left: auto; margin-right: auto;}
