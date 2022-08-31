@@ -1,9 +1,9 @@
-# ProyectoINFO 2022
+# ProyectoINFO 2022 - GRUPO 9.
 
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_las herramientas que utilizamos para crear nuestro proyecto son:_
 
 * [VISUAL_STUDIO_CODE](https://code.visualstudio.com/) - usado para codear.
 * [GIT](https://git-scm.com/) - usado para guardar versiones.
@@ -24,6 +24,11 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/melitaf/ProyectoINFO/graphs/contributors) quíenes han participado en este proyecto, y tambien a través de [TRELLO](https://trello.com/b/tHGTrbiw/fundacion-info2022) cómo nos organizamos.
 ------------------------------------------------------------------------------------------------------------------------
+
+## Profesores 📋
+
+* **David Emanuel Sandoval** - *Profesor de clases de PW + BD.*
+* **Lidia** - *Tutora del proyecto final.*
 
 
 ## Comenzando 🚀
@@ -72,32 +77,3 @@ _"...\ProyectoINFO\ProyectoINFO\src py manage.py runserver"_
 Y ya deberia estar corriendo el programa en tu computadora local.
 
 
-****************************************************************************************************************
-
-
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
-****************************************************************************************************************

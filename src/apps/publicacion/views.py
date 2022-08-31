@@ -26,6 +26,7 @@ def post_create(request):
 
 def post_update(request, pk):
     Post = get_object_or_404(post, id=pk)
+    form = PostForm()
     if request.method == 'POST':
         form = PostForm(request.POST, instance=Post)
         if form.is_valid():
