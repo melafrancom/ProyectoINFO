@@ -30,5 +30,5 @@ def post_update(request, pk):
         form = PostForm(request.POST, instance=Post)
         if form.is_valid():
             form.save()
-            return redirect('blog')
+            return redirect('post_list')
     return render(request, 'blog_update.html', {'form': form})

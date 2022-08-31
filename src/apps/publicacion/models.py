@@ -19,7 +19,7 @@ class post(models.Model):
     #slug = models.SlugField()
 
     def __str__(self):
-        return self.title
+        return self.titulo
 
 
 class Coment(models.Model):
@@ -30,7 +30,7 @@ class Coment(models.Model):
     modificado = models.DateField(auto_now=True)
 
     def __str__(self):
-        return self.content[:10]
+        return self.contenido[:10]
 
 
 class Categoria(models.Model):
@@ -38,7 +38,7 @@ class Categoria(models.Model):
     creado = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return self.name
+        return self.nombre
 
 
 

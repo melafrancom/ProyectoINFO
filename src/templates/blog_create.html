@@ -77,7 +77,11 @@
 							<li><a href="{% url 'areas' %}">areas</a></li>
 							<li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
 							<li><a href="{% url 'post_list' %}">Blog</a></li>
-							<li><a href="{% url 'login' %}">Login</a></li>
+							{% if request.user.is_authenticated %}
+								<li><a href="{% url 'logout' %}">logout: {{ user }}</a></li>
+							{% else %}
+								<li><a href="{% url 'login' %}">Login</a></li>
+							{% endif %}
 							<li><a href="#contacts">Contacto</a></li>
 						</ul>
 					</div>
@@ -97,7 +101,6 @@
 									class="fa fa-facebook-square"></i></a></li>
 					</ul>
 				</div>
-				<a href="#content" class="home_link1 scroll-to"><i class="fa fa-arrow-circle-o-down"></i></a>
 			</div>
 		</div>
 		<!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
@@ -180,23 +183,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="sub-menu sub-menu-1"><a href="index.html#packages">Packages</a>
-	<ul>
-		<li><a href="more.html">First More Page</a></li>
-		<li><a href="more2.html">Second More Page</a></li>
-	</ul>
-</li>

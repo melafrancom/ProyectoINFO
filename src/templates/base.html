@@ -77,9 +77,10 @@
 							<li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
 							<li><a href="{% url 'post_list' %}">Blog</a></li>
 							{% if request.user.is_authenticated %}
-								<li><a href="{% url 'logout' %}">logout</a></li>
+								<li><a href="{% url 'logout' %}">logout: {{ user }}</a></li>
 							{% else %}
 								<li><a href="{% url 'login' %}">Login</a></li>
+							{% endif %}
 							<li><a href="#contacts">Contacto</a></li>
 						</ul>
 					</div>
