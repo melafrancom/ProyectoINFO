@@ -169,6 +169,6 @@ LOGIN_REDIRECT_URL = reverse_lazy('principal')
 
 ########## Installing django-crispy-forms ##############
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
