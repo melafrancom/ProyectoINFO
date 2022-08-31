@@ -1,5 +1,5 @@
 from email import message
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import post
 from .forms import PostForm
@@ -17,8 +17,18 @@ def post_create(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.succes('Post creado con éxito.')
+            form.save(commit=False)
+            post.User = request.user
+            messages.success(request, 'Post creado con éxito.')
             return redirect('post_list')
         message.error(request, 'Hay errores en el formulario!')
     return render(request, 'blog_create.html', {'form': form})
+
+def post_update(request, pk):
+    Post = get_object_or_404(post, id=pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=Post)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
+    return render(request, 'blog_update.html', {'form': form})
