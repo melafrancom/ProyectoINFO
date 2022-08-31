@@ -88,7 +88,7 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 #services{}
 
-.services1{background: url(../images/backgroundhecho2.png) center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
+.services1{background: url(../images/cruces.jpg) center bottom no-repeat #fff; padding: 70px 0;border-bottom: 1px solid #f3f3f3;}
 .services1 .block1{}
 .services1 .block1 img{margin-left: auto; margin-right: auto;}
 .services1 .block2{padding-top: 25px;}
