@@ -103,20 +103,13 @@
 			</div>
 		</div>
 <!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
+
 		<div id="content">
 			<div class="container">
-                <h1>Editar Post: {{ post }}</h1>
-				<ul class="messages">
-					{% for message in messages %}
-					<li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-					{% endfor %}
-				</ul>
+                <h1 class="text-center">Post: {{ Post:titulo }}</h1>
 
-				<form action="" method="post" enctype="multipart/form-data">
-					{% csrf_token %}
-					{{ form|crispy }}
-					<button class="btn btn-success" type="submit">Guardar post:</button>
-				</form>
+                <a href="{% url '' %}" class="btn btn-primary">Volver</a>
+
             </div>
 		</div>
 

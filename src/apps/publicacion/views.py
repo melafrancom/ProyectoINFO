@@ -37,3 +37,8 @@ def post_delete(request, pk):
     Post = get_object_or_404(post, id=pk)
     Post.delete()
     return redirect('post_list')
+
+
+def post_detail(request, pk):
+    Post = get_object_or_404(post, id=pk)
+    return render(request, 'blog_detail.html', {'Post': post})

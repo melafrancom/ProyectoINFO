@@ -137,6 +137,7 @@
 						<a class="btn btn-primary" href="{% url 'post_update' Post.id %}">Editar Post</a>
 						<a class="btn btn-danger" href="{% url 'post_delete' Post.id %}">Borrar Post</a>
 					{% endif %}
+					<a class="btn btn-success" href="{% url 'post_detail' Post.id %}">Ver Post</a>
 				{% endfor %}
 			</div>
 		</div>
