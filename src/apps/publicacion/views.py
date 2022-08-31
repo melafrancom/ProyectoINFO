@@ -11,6 +11,7 @@ def post_list(request):
     print(posts.query)
     return render(request, 'blog.html', {'posts': posts})
 
+
 def post_create(request):
     form = PostForm()
     if request.method == 'POST':
@@ -20,4 +21,4 @@ def post_create(request):
             messages.succes('Post creado con éxito.')
             return redirect('post_list')
         message.error(request, 'Hay errores en el formulario!')
-    return render(request, 'blog_create.html')
+    return render(request, 'blog_create.html', {'form': form})

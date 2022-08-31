@@ -99,35 +99,38 @@
 				<a href="#content" class="home_link1 scroll-to"><i class="fa fa-arrow-circle-o-down"></i></a>
 			</div>
 		</div>
+
+
 <!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
-        <h1>Bienvenido a nuestro Login Page:</h1>
-        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Iniciar sesión</div>
-            <div class="card-body">
+		<div class="container">
+			<h1>Bienvenido a nuestro Login Page:</h1>
+			<div class="card text-bg-info mb-3" style="max-width: 18rem;">
+				<div class="card-header">Login</div>
+				<div class="card-body">
+	<!--			<h5 class="card-title">Registracion:</h5> -->
+					{% if messages %}
+					<ul class="messages">
+						{% for message in messages %}
+						<li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+						{% endfor %}
+					</ul>
+					{% endif %}
 
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-
-                {% if user.is_authenticated %}
-                    <h2>Usted está logeado como: {{ user.username }}</h2>
-                    <a href= "{% url 'logout' %}">Cerrar sesión</a>
-                    <a href="{% url 'principal' %}">Volver al inicio</a>
-                {% else %}
-                <form action="" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="btn btn-success" type="submit">Iniciar Sesión:</button>
-                </form>
-                <p>No tiene una cuenta? <span> <a href="{% url 'registrar_usuario' %}"> Registrese acá:</a></span></p>
-                {% endif %}
-
-            </div>
-        </div>
+					{% if user.is_authenticated %}
+						<h2>Usted está logeado como: {{ user.username }}</h2>
+						<a href= "{% url 'logout' %}">Cerrar sesión</a>
+						<a href="{% url 'principal' %}">Volver al inicio</a>
+					{% else %}
+					<form action="" method="post">
+						{% csrf_token %}
+						{{ form|crispy }}
+						<button class="btn btn-success" type="submit">Iniciar Sesión:</button>
+					</form>
+					<p>No tiene una cuenta? <span> <a href="{% url 'registrar_usuario' %}"> Registrese acá:</a></span></p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
 <!-- AQUI FINALIZA EL CONTENIDO DEL MEDIO??????? -->
 		<div id="contacts">
 			<div id="contacts1">
@@ -181,3 +184,4 @@
 </body>
 
 </html>
+
