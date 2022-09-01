@@ -30,7 +30,7 @@ def post_update(request, pk):
     if form.is_valid():
         form.save()
         return redirect('post_list')
-    return render(request, 'blog_update.html', {'form': form, 'Post': post})
+    return render(request, 'blog_update.html', {'form': form, 'Post': Post})
 
 
 def post_delete(request, pk):
