@@ -19,7 +19,7 @@ def post_create(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.autor = request.user
-            post.save
+            form.save
             messages.success(request, 'Post creado con éxito.')
             return redirect('post_list')
         message.error(request, 'Hay errores en el formulario!')
