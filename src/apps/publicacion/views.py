@@ -16,9 +16,9 @@ def post_create(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            post = form.save(commit=False)
-            post.autor = request.user
-            form.save
+            Post = form.save(commit=False)
+            Post.autor = request.user
+            Post.save()
             messages.success(request, 'Post creado con éxito.')
             return redirect('post_list')
         messages.error(request, 'Hay errores en el formulario!')
