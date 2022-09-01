@@ -5,11 +5,12 @@ from django.conf import settings
 from apps.accounts.models import User
 
 
+
 # Create your models here.
 
 class post(models.Model):
     titulo = models.CharField("Titulo", max_length=250)
-    autor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='posts')
     contenido = models.TextField()
     img = models.ImageField(null=True, blank=True, upload_to='img/publicacion', help_text='Seleccione una imagen para mostrar:')
     creado = models.DateTimeField(default=timezone.now)

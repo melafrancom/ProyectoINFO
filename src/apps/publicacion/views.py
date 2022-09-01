@@ -41,4 +41,4 @@ def post_delete(request, pk):
 
 def post_detail(request, pk):
     Post = get_object_or_404(post, id=pk)
-    return render(request, 'blog_detail.html', {'Post': post})
+    return render(request, 'blog_detail.html', {'Post': Post})
