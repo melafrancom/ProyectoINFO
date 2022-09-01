@@ -1,4 +1,3 @@
-from email import message
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import post
@@ -22,7 +21,7 @@ def post_create(request):
             form.save
             messages.success(request, 'Post creado con éxito.')
             return redirect('post_list')
-        message.error(request, 'Hay errores en el formulario!')
+        messages.error(request, 'Hay errores en el formulario!')
     return render(request, 'blog_create.html', {'form': form})
 
 def post_update(request, pk):
