@@ -6,6 +6,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def donaciones(request):
-    template_name = "programa3.html"
+    template_name = "donaciones.html"
     ctx = {}
     return render(request, template_name, ctx)

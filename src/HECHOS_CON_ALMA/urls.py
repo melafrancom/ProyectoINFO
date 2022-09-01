@@ -32,7 +32,7 @@ urlpatterns = [
     path('areas/', Areas, name='areas'),
     path('blog/', include('apps.publicacion.urls')),
     
-    path('donacion/', donaciones),
+    path('donacion/', donaciones, name='donaciones'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
