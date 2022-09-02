@@ -145,13 +145,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="{{ Post.image.url }}"  alt="Imagen del post">
-					<div class="card-body">
-						<h5 class="card-title">{{ Post.titulo }}</h5>
-						<p class="card-text">{{ Post.contenido }}</p>
-					</div>
-				</div>
 					{% if request.user.is_authenticated %}
 						<a class="btn btn-primary" href="{% url 'post_update' Post.id %}">Editar Post</a>
 						<a class="btn btn-danger" href="{% url 'post_delete' Post.id %}">Borrar Post</a>
