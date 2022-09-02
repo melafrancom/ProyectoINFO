@@ -18,7 +18,7 @@
 
 	<link href="/static/css/bootstrap.css" rel="stylesheet">
 	<link href="/static/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
 
 	<link href="/static/css/touchTouch.css" rel="stylesheet">
@@ -130,8 +130,8 @@
 			</div>
 		</div>
 		<!-- AQUI COMIENZA EL CONTENIDO DEL MEDIO??????? -->
-		<div id="content">
-			<div class="container">
+		
+		<div class="container">
 				<h1 class="my-3">Lista de posts:</h1>
 				{% for Post in posts %}
 				<div class="row row-cols-1 row-cols-md-3 g-4">
@@ -151,8 +151,8 @@
 					{% endif %}
 					<a class="btn btn-success" href="{% url 'post_detail' Post.id %}">Ver Post</a>
 				{% endfor %}
-			</div>
 		</div>
+		
 
 		<!-- AQUI FINALIZA EL CONTENIDO DEL MEDIO??????? -->
 		<div id="contacts">
